@@ -60,16 +60,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/powerbutton">
 
-            <TextView
-                android:id="@+id/channelplaying"
-                android:layout_width="90dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="6dp"
-                android:text="4 Mega"
-                android:textColor="#F1E7E7"
-                android:textSize="24sp"
-                android:textStyle="bold|italic"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="275dp"
+                android:layout_height="121dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -173,6 +169,7 @@
             android:layout_height="52dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="2dp"
+            android:clickable="false"
             app:layout_constraintBottom_toBottomOf="@+id/spotify"
             app:layout_constraintEnd_toEndOf="@+id/youtube"
             app:layout_constraintStart_toStartOf="parent"
