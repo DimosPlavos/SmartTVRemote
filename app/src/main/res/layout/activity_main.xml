@@ -24,7 +24,8 @@
             android:layout_width="71dp"
             android:layout_height="149dp"
             android:layout_marginTop="10dp"
-            android:background="#01988D"
+            android:background="#00998E"
+            android:radius="10px"
             app:layout_constraintEnd_toEndOf="@+id/nowplaying"
             app:layout_constraintTop_toBottomOf="@+id/nowplaying">
 
@@ -133,6 +134,7 @@
             android:layout_width="87dp"
             android:layout_height="43dp"
             android:text="GUIDE"
+            app:cornerRadius="30px"
             app:layout_constraintEnd_toStartOf="@+id/channel"
             app:layout_constraintStart_toEndOf="@+id/volume"
             app:layout_constraintTop_toTopOf="@+id/channel" />
@@ -142,6 +144,7 @@
             android:layout_width="88dp"
             android:layout_height="43dp"
             android:text="APPS"
+            app:cornerRadius="30px"
             app:layout_constraintBottom_toBottomOf="@+id/channel"
             app:layout_constraintEnd_toStartOf="@+id/channel"
             app:layout_constraintStart_toEndOf="@+id/volume" />
@@ -152,7 +155,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:backgroundTint="#1BFFB6"
             android:text="SOURCE"
+            app:cornerRadius="30px"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
