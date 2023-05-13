@@ -1,6 +1,4 @@
-package com.example.smarttvremote;
-
-import com.example.smarttvremote.CategoryDomain;
+package com.example.smarttvremote.remote;
 
 public interface SelectListener {
     void onItemClicked(CategoryDomain myModel);

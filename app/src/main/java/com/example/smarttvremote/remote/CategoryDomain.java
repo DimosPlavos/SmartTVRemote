@@ -1,4 +1,4 @@
-package com.example.smarttvremote;
+package com.example.smarttvremote.remote;
 
 public class CategoryDomain {
     private String title;

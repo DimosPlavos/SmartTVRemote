@@ -114,7 +114,7 @@
             app:srcCompat="@drawable/powerbutton" />
 
         <ImageView
-            android:id="@+id/imageView22"
+            android:id="@+id/mutebutton"
             android:layout_width="46dp"
             android:layout_height="42dp"
             android:background="#04978C"
