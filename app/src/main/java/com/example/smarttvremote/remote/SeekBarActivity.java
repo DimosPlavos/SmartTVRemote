@@ -124,5 +124,5 @@ public class SeekBarActivity extends AppCompatActivity {
 
 
     }
-    
+
 }
