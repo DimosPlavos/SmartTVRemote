@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="27dp"
                 android:inputType="textPersonName"
-                android:text="Φωτεινότητα"
+                android:text="Φωτεινότητα  10"
                 android:textSize="40dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,10 @@
                 app:layout_constraintHorizontal_bias="0.32"
                 app:layout_constraintStart_toStartOf="@+id/sett_screen"
                 app:layout_constraintTop_toTopOf="@+id/sett_screen"
-                app:layout_constraintVertical_bias="0.854" />
+                app:layout_constraintVertical_bias="0.854"
+                android:max="100"
+                android:progress="10"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -113,12 +116,12 @@
 
             />
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editTextContrast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:inputType="textPersonName"
-        android:text="Αντίθεση"
+        android:text="Αντίθεση 10"
         android:textSize="40dp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,7 +137,10 @@
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="@+id/sett_timer"
         app:layout_constraintTop_toTopOf="@+id/sett_timer"
-        app:layout_constraintVertical_bias="0.854" />
+        app:layout_constraintVertical_bias="0.854"
+        android:max="100"
+        android:progress="10"
+        />
 
 
 
@@ -158,12 +164,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editTextColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="27dp"
                 android:inputType="textPersonName"
-                android:text="Χρώμα"
+                android:text="Χρώμα 10"
                 android:textSize="40dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
@@ -178,7 +184,10 @@
                 app:layout_constraintEnd_toEndOf="@+id/sett_internet"
                 app:layout_constraintStart_toStartOf="@+id/sett_internet"
                 app:layout_constraintTop_toTopOf="@+id/sett_internet"
-                app:layout_constraintVertical_bias="0.854" />
+                app:layout_constraintVertical_bias="0.854"
+                android:max="100"
+                android:progress="10"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -198,12 +207,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/editTextSaturation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="27dp"
                 android:inputType="textPersonName"
-                android:text="Κορεσμός"
+                android:text="Κορεσμός 10"
                 android:textSize="40dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
@@ -218,7 +227,10 @@
                 app:layout_constraintHorizontal_bias="0.32"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sett_support"
-                app:layout_constraintVertical_bias="0.896" />
+                app:layout_constraintVertical_bias="0.896"
+                android:max="100"
+                android:progress="10"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
