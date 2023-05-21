@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -53,9 +53,9 @@
         <Button
             android:id="@+id/sett_screen"
             android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="13dp"
             android:layout_marginTop="32dp"
+            android:layout_weight="1"
             android:background="@drawable/settings"
             android:text="Οθόνη"
             android:textAllCaps="false"
