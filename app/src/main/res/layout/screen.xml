@@ -195,7 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
         <TextView
-            android:id="@+id/sett_support"
+            android:id="@+id/sett_info"
             android:layout_width="350dp"
             android:layout_height="0dp"
             android:layout_marginTop="32dp"
@@ -222,11 +222,11 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cat_background"
-                app:layout_constraintBottom_toBottomOf="@+id/sett_support"
-                app:layout_constraintEnd_toEndOf="@+id/sett_support"
+                app:layout_constraintBottom_toBottomOf="@+id/sett_info"
+                app:layout_constraintEnd_toEndOf="@+id/sett_info"
                 app:layout_constraintHorizontal_bias="0.32"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/sett_support"
+                app:layout_constraintTop_toTopOf="@+id/sett_info"
                 app:layout_constraintVertical_bias="0.896"
                 android:max="100"
                 android:progress="10"

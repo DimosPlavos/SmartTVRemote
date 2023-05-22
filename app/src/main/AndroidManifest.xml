@@ -30,6 +30,9 @@
 
         <activity android:name=".Settings.SettingsActivity" android:exported="true"/>
         <activity android:name=".Settings.ScreenSettingsActivity" android:exported="true"/>
+        <activity android:name=".Settings.InfoActivity" android:exported="true"/>
+        <activity android:name=".Settings.SourceActivity" android:exported="true"/>
+        <activity android:name=".Settings.WifiList" android:exported="true"/>
     </application>
 
 </manifest>

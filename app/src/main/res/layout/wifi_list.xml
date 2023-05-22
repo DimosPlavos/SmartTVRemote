@@ -98,7 +98,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/sett_support"
+            android:id="@+id/sett_info"
             android:layout_width="350dp"
             android:layout_height="0dp"
             android:layout_marginTop="32dp"

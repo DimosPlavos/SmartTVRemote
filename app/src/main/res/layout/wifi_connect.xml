@@ -87,7 +87,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/sett_support"
+            android:id="@+id/sett_info"
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginTop="62dp"

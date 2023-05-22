@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import com.example.smarttvremote.Basic_Main.BasicActivity;
 import com.example.smarttvremote.R;
 import com.example.smarttvremote.Settings.SettingsActivity;
+import com.example.smarttvremote.Settings.SourceActivity;
 import com.example.smarttvremote.utils.AbstractControllerActivity;
 import com.example.smarttvremote.utils.Utills;
 
@@ -21,24 +22,23 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
     public void SetUp() {
         setContentView(R.layout.smart);
 
-        //edw kanw methodo onClick gia to Guide Button
-        Utills.SetUpViewOnClickListener(this, R.id.guide, ()->{ Toast.makeText(getApplicationContext(),"Guide button has been clicked",Toast.LENGTH_LONG).show(); });
-
-        //edw kanv methodo onClick gia to power Button
         Utills.SetUpViewOnClickListener(this, R.id.s_powerbutton, ()->{ tv.powerUp(); });
 
-        //edw kanw methodo onClick gia Channel Up and down
+        Utills.SetUpViewOnClickListener(this, R.id.source, ()->{
+            Intent intent = new Intent(this, SourceActivity.class);
+            startActivity(intent);
+        });
+
         Utills.SetUpViewOnClickListener(this, R.id.channelup, ()->{ tv.nextChannel(); });
         Utills.SetUpViewOnClickListener(this, R.id.channeldown, ()->{ tv.previousChannel(); });
 
-        //edw kanw methodo onClick gia Volume Up and down
         Utills.SetUpViewOnClickListener(this, R.id.volumeup, ()->{ tv.soundUp(); });
         Utills.SetUpViewOnClickListener(this, R.id.volumedown, ()->{ tv.soundDown(); });
 
-        //edw kanw methodo onclick gia mute
+        Utills.SetUpViewOnClickListener(this, R.id.guide, ()->{ Toast.makeText(getApplicationContext(),"Guide button has been clicked",Toast.LENGTH_LONG).show(); });
+
         Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{ tv.mute(); });
 
-        //edw kanv methodo gia settings
         Utills.SetUpViewOnClickListener(this, R.id.settings, ()->{
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);

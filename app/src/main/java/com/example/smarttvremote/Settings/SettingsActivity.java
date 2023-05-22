@@ -24,6 +24,14 @@ public class SettingsActivity extends AppCompatActivity
             startActivity(intent);
         });
 
+        Utills.SetUpViewOnClickListener(this, R.id.sett_internet, ()->{
+            Intent intent = new Intent(this, WifiList.class);
+            startActivity(intent);
+        });
 
+        Utills.SetUpViewOnClickListener(this, R.id.sett_info, ()->{
+            Intent intent = new Intent(this, InfoActivity.class);
+            startActivity(intent);
+        });
     }
 }
