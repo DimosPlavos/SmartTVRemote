@@ -1,42 +1,31 @@
 package com.example.smarttvremote.Smart_Main;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
 import com.example.smarttvremote.Basic_Main.BasicActivity;
 import com.example.smarttvremote.R;
-
 import com.example.smarttvremote.Settings.SettingsActivity;
-import com.example.smarttvremote.tvapi.ITVControler;
-import com.example.smarttvremote.Logcat.LogcatTVControler;
+import com.example.smarttvremote.utils.AbstractControllerActivity;
 import com.example.smarttvremote.utils.Utills;
 
-public class SmartActivity extends AppCompatActivity implements SelectListener
+public class SmartActivity extends AbstractControllerActivity implements SelectListener
 {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewCategoryList;
 
-    private final ITVControler tv = new LogcatTVControler();
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        tv.connect();
+    public void SetUp() {
+        setContentView(R.layout.smart);
 
         //edw kanw methodo onClick gia to Guide Button
         Utills.SetUpViewOnClickListener(this, R.id.guide, ()->{ Toast.makeText(getApplicationContext(),"Guide button has been clicked",Toast.LENGTH_LONG).show(); });
 
         //edw kanv methodo onClick gia to power Button
-        Utills.SetUpViewOnClickListener(this, R.id.powerbutton, ()->{ tv.powerUp(); });
+        Utills.SetUpViewOnClickListener(this, R.id.s_powerbutton, ()->{ tv.powerUp(); });
 
         //edw kanw methodo onClick gia Channel Up and down
         Utills.SetUpViewOnClickListener(this, R.id.channelup, ()->{ tv.nextChannel(); });
@@ -47,7 +36,7 @@ public class SmartActivity extends AppCompatActivity implements SelectListener
         Utills.SetUpViewOnClickListener(this, R.id.volumedown, ()->{ tv.soundDown(); });
 
         //edw kanw methodo onclick gia mute
-        Utills.SetUpViewOnClickListener(this, R.id.mutebutton, ()->{ tv.mute(); });
+        Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{ tv.mute(); });
 
         //edw kanv methodo gia settings
         Utills.SetUpViewOnClickListener(this, R.id.settings, ()->{

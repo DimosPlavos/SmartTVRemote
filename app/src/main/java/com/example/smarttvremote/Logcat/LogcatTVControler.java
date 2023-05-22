@@ -1,9 +1,16 @@
 package com.example.smarttvremote.Logcat;
 import com.example.smarttvremote.tvapi.ITVControler;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.Binder;
+import android.os.IBinder;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 // logs messages in the Logcat console (go to view -> Tool Windows -> Logcat)
-public class LogcatTVControler implements ITVControler
+public class LogcatTVControler extends Service implements ITVControler
 {
     private boolean TVisOn = false; // is the tv on or off?
 
@@ -107,4 +114,34 @@ public class LogcatTVControler implements ITVControler
     public void goToChannel(int num) {
         this.currentChannel = num;
     }
+
+
+    private final TVControllerBinder binder = new TVControllerBinder();
+    private boolean bonded = false;
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        if(!bonded)
+        {
+            this.connect();
+            bonded = true;
+        }
+
+        return binder;
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        this.disconnect();
+        return false;
+    }
+
+    public class TVControllerBinder extends Binder
+    {
+        public ITVControler getService() {
+            return LogcatTVControler.this;
+        }
+    }
+
 }

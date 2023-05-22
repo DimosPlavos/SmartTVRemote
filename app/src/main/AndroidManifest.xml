@@ -15,8 +15,10 @@
             android:name=".Smart_Main.CategoryAdaptor$SeekBarActivity"
             android:exported="false" />
 
+        <service android:name=".Logcat.LogcatTVControler" />
+
         <activity
-            android:name=".Smart_Main.SmartActivity"
+            android:name=".Basic_Main.BasicActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Basic_Main.BasicActivity" android:exported="true"/>
-
+        <activity android:name=".Smart_Main.SmartActivity" android:exported="true"/>
 
         <activity android:name=".Settings.SettingsActivity" android:exported="true"/>
         <activity android:name=".Settings.ScreenSettingsActivity" android:exported="true"/>

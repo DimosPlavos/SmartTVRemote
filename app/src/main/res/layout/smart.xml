@@ -59,7 +59,7 @@
             android:background="#D1A3A3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/powerbutton">
+            app:layout_constraintTop_toBottomOf="@+id/s_powerbutton">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview"
@@ -104,7 +104,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
-            android:id="@+id/powerbutton"
+            android:id="@+id/s_powerbutton"
             android:layout_width="65dp"
             android:layout_height="60dp"
             android:layout_marginStart="5dp"
@@ -114,7 +114,7 @@
             app:srcCompat="@drawable/powerbutton" />
 
         <ImageView
-            android:id="@+id/mutebutton"
+            android:id="@+id/s_mutebutton"
             android:layout_width="46dp"
             android:layout_height="42dp"
             android:background="#04978C"

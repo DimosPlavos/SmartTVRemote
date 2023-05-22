@@ -21,7 +21,7 @@
 
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/b_powerbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -32,7 +32,7 @@
             app:srcCompat="@drawable/on" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/b_mutebutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -61,7 +61,7 @@
 
 
         <ImageButton
-            android:id="@+id/button1"
+            android:id="@+id/b_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -69,7 +69,7 @@
             app:srcCompat="@drawable/b1" />
 
         <ImageButton
-            android:id="@+id/button2"
+            android:id="@+id/b_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -77,7 +77,7 @@
             app:srcCompat="@drawable/b2" />
 
         <ImageButton
-            android:id="@+id/button3"
+            android:id="@+id/b_button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -85,7 +85,7 @@
             app:srcCompat="@drawable/b3" />
 
         <ImageButton
-            android:id="@+id/button4"
+            android:id="@+id/b_button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -93,7 +93,7 @@
             app:srcCompat="@drawable/b4" />
 
         <ImageButton
-            android:id="@+id/button5"
+            android:id="@+id/b_button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -101,7 +101,7 @@
             app:srcCompat="@drawable/b5" />
 
         <ImageButton
-            android:id="@+id/button6"
+            android:id="@+id/b_button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -109,7 +109,7 @@
             app:srcCompat="@drawable/b6" />
 
         <ImageButton
-            android:id="@+id/button7"
+            android:id="@+id/b_button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -117,7 +117,7 @@
             app:srcCompat="@drawable/b7" />
 
         <ImageButton
-            android:id="@+id/button8"
+            android:id="@+id/b_button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -125,7 +125,7 @@
             app:srcCompat="@drawable/b8" />
 
         <ImageButton
-            android:id="@+id/button9"
+            android:id="@+id/b_button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -133,7 +133,7 @@
             app:srcCompat="@drawable/b9" />
 
         <ImageButton
-            android:id="@+id/button0"
+            android:id="@+id/b_button0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -153,12 +153,12 @@
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/mic"
+        app:layout_constraintEnd_toStartOf="@+id/b_microphone"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/channel_"
+            android:id="@+id/b_volumedown"
             android:layout_width="81dp"
             android:layout_height="53dp"
             android:background="@null"
@@ -169,7 +169,7 @@
             app:srcCompat="@drawable/minus_mini" />
 
         <ImageButton
-            android:id="@+id/arrow_down"
+            android:id="@+id/b_volumeup"
             android:layout_width="67dp"
             android:layout_height="62dp"
             android:background="@null"
@@ -181,7 +181,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
-        android:id="@+id/mic"
+        android:id="@+id/b_microphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription=" "
@@ -205,10 +205,10 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toEndOf="@+id/mic">
+        app:layout_constraintStart_toEndOf="@+id/b_microphone">
 
         <ImageButton
-            android:id="@+id/arrow_up_1"
+            android:id="@+id/b_channeldown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
@@ -219,7 +219,7 @@
             app:srcCompat="@drawable/arrow_down_mini" />
 
         <ImageButton
-            android:id="@+id/arrow_down_1"
+            android:id="@+id/b_channelup"
             android:layout_width="71dp"
             android:layout_height="71dp"
             android:background="@null"
@@ -239,11 +239,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mic"
+        app:layout_constraintTop_toBottomOf="@+id/b_microphone"
         app:layout_constraintVertical_bias="1.0">
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/b_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="false"
@@ -259,7 +259,7 @@
             app:srcCompat="@drawable/settings1" />
 
         <ImageButton
-            android:id="@+id/smart"
+            android:id="@+id/b_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription=" "
