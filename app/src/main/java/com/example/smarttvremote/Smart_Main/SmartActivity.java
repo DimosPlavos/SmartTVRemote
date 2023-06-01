@@ -49,6 +49,8 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
             startActivity(intent);
         });
 
+        Utills.SetUpViewOnClickListener(this, R.id.microphone, ()->{ OnVoiceRecognition(); });
+
         recyclerviewCategory();
     }
 

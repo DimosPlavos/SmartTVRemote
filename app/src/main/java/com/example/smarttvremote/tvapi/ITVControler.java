@@ -9,6 +9,8 @@ public interface ITVControler
     // push the power button
     void powerUp();
 
+    boolean isOn();
+
     // sound
     void mute(); // for the mute button
     void soundUp(); // increase the sound

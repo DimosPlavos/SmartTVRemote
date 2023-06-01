@@ -1,16 +1,22 @@
 package com.example.smarttvremote.utils;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.speech.RecognizerIntent;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.smarttvremote.Logcat.LogcatTVControler;
 import com.example.smarttvremote.tvapi.ITVControler;
+
+import java.util.ArrayList;
 
 public abstract class AbstractControllerActivity extends AppCompatActivity
 {
@@ -57,5 +63,56 @@ public abstract class AbstractControllerActivity extends AppCompatActivity
             bouded = false;
         }
     };
+
+    protected void OnVoiceRecognition()
+    {
+        int REQUEST_SPEECH_RECOGNIZER = 3000;
+        Intent intent = new Intent  (RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, "en-US");
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,"Say Operation");
+        startActivityForResult(intent, REQUEST_SPEECH_RECOGNIZER);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode,
+                                 Intent data) {
+        int REQUEST_SPEECH_RECOGNIZER = 3000;
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("DEMO-REQUESTCODE", Integer.toString(requestCode));
+        Log.i("DEMO-RESULTCODE", Integer.toString(resultCode));
+
+        if (requestCode == REQUEST_SPEECH_RECOGNIZER && resultCode == Activity.RESULT_OK && data != null) {
+            ArrayList<String> text = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            String mAnswer = text.get(0);
+            Log.i("DEMO-ANSWER", text.get(0));
+
+            hundleAnswer(mAnswer.toLowerCase());
+        }
+        else {
+            Log.e("DEMO-ERROR", "Recognizer API error");
+        }
+    }
+
+    public void hundleAnswer(String answer)
+    {
+        switch (answer)
+        {
+            case "turn on":
+                if(!tv.isOn()) tv.powerUp();
+                break;
+            case "turn off":
+                if(tv.isOn()) tv.powerUp();
+                break;
+            case "next":
+                tv.nextChannel();
+                break;
+            case "previous":
+                tv.previousChannel();
+                break;
+            default:
+                Toast.makeText(getApplicationContext(),"Operation is not valid",Toast.LENGTH_LONG).show();
+                break;
+        }
+    }
 
 }

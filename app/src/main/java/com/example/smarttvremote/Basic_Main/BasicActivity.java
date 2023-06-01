@@ -33,7 +33,7 @@ public class BasicActivity extends AbstractControllerActivity
         Utills.SetUpViewOnClickListener(this, R.id.b_channelup, ()->{ tv.nextChannel(); });
         Utills.SetUpViewOnClickListener(this, R.id.b_channeldown, ()->{ tv.previousChannel(); });
 
-        Utills.SetUpViewOnClickListener(this, R.id.b_microphone, ()->{ microphone(); });
+        Utills.SetUpViewOnClickListener(this, R.id.b_microphone, ()->{ OnVoiceRecognition(); });
 
         Utills.SetUpViewOnClickListener(this, R.id.b_settings, ()->{
             Intent intent = new Intent(this, SettingsActivity.class);
@@ -51,8 +51,4 @@ public class BasicActivity extends AbstractControllerActivity
 
     }
 
-    private void microphone()
-    {
-
-    }
 }
