@@ -1,6 +1,7 @@
 package com.example.smarttvremote.Smart_Main;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,7 +91,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         }
     }
 
-    public static class SeekBarActivity extends AppCompatActivity {
+    public class SeekBarActivity extends AppCompatActivity {
 
         private AppBarConfiguration appBarConfiguration;
         //private ActivitySeekBarBinding binding;
@@ -112,7 +113,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-
+            Log.i("TV", "HAHAHAHAH");
 
             setContentView(R.layout.screen);
             seekBarBright = (SeekBar) findViewById(R.id.seekBar2);
@@ -131,9 +132,12 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
 
 
             seekBarBright.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+               // int seekBarValue = 10;
                 @Override
-                public void onProgressChanged(SeekBar Bar, int progress, boolean b) {
-                    textViewBright.setText("Φωτεινότητα "+String.valueOf(progress));
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                   // seekBarValue = progress;
+                    textViewBright.setText("Android: "+progress);
                 }
 
                 @Override
@@ -146,57 +150,57 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
 
                 }
             });
-            seekBarContrast.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int contrast, boolean b) {
-                    textViewContrast.setText("Αντίθεση "+String.valueOf(contrast));
-
-                }
-
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-
-                }
-
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-
-                }
-            });
-            seekBarColor.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int color, boolean b) {
-                    textViewColor.setText("Χρώμα "+String.valueOf(color));
-
-                }
-
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-
-                }
-
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-
-                }
-            });
-            seekBarSaturation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int saturation, boolean b) {
-                    textViewSaturation.setText("Κορεσμός "+String.valueOf(saturation));
-
-                }
-
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-
-                }
-
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-
-                }
-            });
+//            seekBarContrast.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                @Override
+//                public void onProgressChanged(SeekBar seekBar, int contrast, boolean b) {
+//                    textViewContrast.setText("Αντίθεση "+String.valueOf(contrast));
+//
+//                }
+//
+//                @Override
+//                public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//                }
+//
+//                @Override
+//                public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//                }
+//            });
+//            seekBarColor.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                @Override
+//                public void onProgressChanged(SeekBar seekBar, int color, boolean b) {
+//                    textViewColor.setText("Χρώμα "+String.valueOf(color));
+//
+//                }
+//
+//                @Override
+//                public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//                }
+//
+//                @Override
+//                public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//                }
+//            });
+//            seekBarSaturation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//                @Override
+//                public void onProgressChanged(SeekBar seekBar, int saturation, boolean b) {
+//                    textViewSaturation.setText("Κορεσμός "+String.valueOf(saturation));
+//
+//                }
+//
+//                @Override
+//                public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//                }
+//
+//                @Override
+//                public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//                }
+//            });
 
 
 
