@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040D36"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:background="@null"
+            android:contentDescription=" "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_colour" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="276dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="4dp"
+            android:inputType="textPersonName"
+            android:text="Χρονοδιακόπτης"
+            android:textColor="#1BFFB6"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.91">
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sett_timer"
+        android:layout_width="361dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="252dp"
+        android:layout_weight="1"
+        android:background="@drawable/settings"
+        android:gravity="center_horizontal"
+        android:text="Απενεργοποίηση σε"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/add_time"
+        android:layout_width="120dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/sett_timer"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/sett_timer"
+        app:layout_constraintTop_toTopOf="@+id/sett_timer"
+        app:srcCompat="@drawable/arrow_up_mini" />
+
+    <ImageView
+        android:id="@+id/sub_time"
+        android:layout_width="120dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sett_timer"
+        app:layout_constraintEnd_toEndOf="@+id/sett_timer"
+        app:layout_constraintStart_toStartOf="@+id/sett_timer"
+        app:srcCompat="@drawable/arrow_down_mini" />
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="324dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="999 Λεπτα"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub_time"
+        app:layout_constraintEnd_toEndOf="@+id/sett_timer"
+        app:layout_constraintStart_toStartOf="@+id/sett_timer"
+        app:layout_constraintTop_toBottomOf="@+id/add_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
