@@ -33,6 +33,7 @@
         <activity android:name=".Settings.InfoActivity" android:exported="true"/>
         <activity android:name=".Settings.SourceActivity" android:exported="true"/>
         <activity android:name=".Settings.WifiList" android:exported="true"/>
+        <activity android:name=".Settings.WifiActivity" android:exported="true"/>
         <activity android:name=".Settings.SleepTimerActivity" android:exported="true"/>
     </application>
 

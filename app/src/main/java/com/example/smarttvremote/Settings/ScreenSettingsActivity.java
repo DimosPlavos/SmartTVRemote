@@ -15,16 +15,16 @@ import com.example.smarttvremote.utils.Utills;
 public class ScreenSettingsActivity extends AppCompatActivity
 {
     SeekBar brightness;
-    EditText brightness_text;
+    TextView brightness_text;
 
     SeekBar contrast;
-    EditText contrast_text;
+    TextView contrast_text;
 
     SeekBar color;
-    EditText color_text;
+    TextView color_text;
 
     SeekBar saturation;
-    EditText saturation_text;
+    TextView saturation_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
