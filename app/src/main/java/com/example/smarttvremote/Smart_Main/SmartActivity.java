@@ -35,7 +35,12 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         Utills.SetUpViewOnClickListener(this, R.id.volumeup, ()->{ tv.soundUp(); });
         Utills.SetUpViewOnClickListener(this, R.id.volumedown, ()->{ tv.soundDown(); });
 
-        Utills.SetUpViewOnClickListener(this, R.id.guide, ()->{ Toast.makeText(getApplicationContext(),"Guide button has been clicked",Toast.LENGTH_LONG).show(); });
+        //Utills.SetUpViewOnClickListener(this, R.id.guide, ()->{ Toast.makeText(getApplicationContext(),"Guide button has been clicked",Toast.LENGTH_LONG).show(); });
+
+        Utills.SetUpViewOnClickListener(this, R.id.guide, () ->{
+            Intent intent = new Intent(this, Guide.class);
+            startActivity(intent);
+        });
 
         Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{ tv.mute(); });
 
@@ -60,7 +65,7 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
         ArrayList<CategoryDomain> category = new ArrayList<>();
-        category.add(new CategoryDomain("Youtube", "youtube"));
+        category.add(new CategoryDomain("Mega: Eytyximenoi Mazi", "mega_playingnow"));
         category.add(new CategoryDomain("Netflix", "netflix"));
         category.add(new CategoryDomain("Mute", "mute"));
         category.add(new CategoryDomain("Plus", "plus"));

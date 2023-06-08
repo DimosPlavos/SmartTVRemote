@@ -15,7 +15,8 @@
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintEnd_toEndOf="@+id/linearLayoutSettings"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass">
 
         <ImageButton
             android:id="@+id/back"
