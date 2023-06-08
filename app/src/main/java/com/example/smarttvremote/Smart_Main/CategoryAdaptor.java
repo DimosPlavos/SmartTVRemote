@@ -40,7 +40,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         String picUrl = "";
         switch (position) {
             case 0: {
-                picUrl = "youtube";
+                picUrl = "mega_playingnow";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.cat_background));
                 break;
             }case 1: {

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040D36"
+    tools:context=".Smart_Main.Guide">
+
+    <ImageView
+        android:id="@+id/daybefore"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:background="@drawable/rounded_background"
+        android:rotation="-180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/arrowdown"
+        app:layout_constraintStart_toStartOf="@+id/arrowleft"
+        app:layout_constraintTop_toBottomOf="@+id/arrowdown"
+        app:srcCompat="@drawable/doubleright" />
+
+    <ImageView
+        android:id="@+id/returnbutton_guide"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintEnd_toStartOf="@+id/daybefore"
+        app:layout_constraintTop_toTopOf="@+id/daybefore"
+        app:srcCompat="@drawable/resource_return" />
+
+    <ImageView
+        android:id="@+id/arrowleft"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/guide_array_backgroung"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@+id/okbutton"
+        app:layout_constraintEnd_toStartOf="@+id/okbutton"
+        app:layout_constraintTop_toTopOf="@+id/okbutton"
+        app:srcCompat="@drawable/scrollup" />
+
+    <ImageView
+        android:id="@+id/arrowright"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/guide_array_backgroung"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/okbutton"
+        app:layout_constraintStart_toEndOf="@+id/okbutton"
+        app:layout_constraintTop_toTopOf="@+id/okbutton"
+        app:layout_constraintVertical_bias="0.464"
+        app:srcCompat="@drawable/scrollup" />
+
+    <ImageView
+        android:id="@+id/arrowup"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/guide_array_backgroung"
+        app:layout_constraintBottom_toTopOf="@+id/okbutton"
+        app:layout_constraintEnd_toEndOf="@+id/okbutton"
+        app:layout_constraintStart_toStartOf="@+id/okbutton"
+        app:srcCompat="@drawable/scrollup" />
+
+    <ImageView
+        android:id="@+id/arrowdown"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/guide_array_backgroung"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="@+id/okbutton"
+        app:layout_constraintStart_toStartOf="@+id/okbutton"
+        app:layout_constraintTop_toBottomOf="@+id/okbutton"
+        app:srcCompat="@drawable/scrollup" />
+
+    <ImageView
+        android:id="@+id/okbutton"
+        android:layout_width="95dp"
+        android:layout_height="97dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/okbutton" />
+
+    <ImageView
+        android:id="@+id/info_guide"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toEndOf="@+id/dayafter"
+        app:layout_constraintTop_toTopOf="@+id/dayafter"
+        app:srcCompat="@drawable/infobutton" />
+
+    <TextView
+        android:id="@+id/guidetext"
+        android:layout_width="195dp"
+        android:layout_height="36dp"
+        android:background="@drawable/rounded_background"
+        android:text="GUIDE"
+        android:textAlignment="center"
+        android:textDirection="locale"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/arrowup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <ImageView
+        android:id="@+id/dayafter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_background"
+
+        app:layout_constraintEnd_toEndOf="@+id/arrowright"
+        app:layout_constraintStart_toStartOf="@+id/arrowdown"
+        app:layout_constraintTop_toTopOf="@+id/daybefore"
+        app:srcCompat="@drawable/doubleright" />
+</androidx.constraintlayout.widget.ConstraintLayout>
