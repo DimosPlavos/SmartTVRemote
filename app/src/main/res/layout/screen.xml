@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back_colour" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,12 +45,15 @@
     <LinearLayout
         android:layout_width="387dp"
         android:layout_height="670dp"
+        android:layout_marginTop="1dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,6 +73,7 @@
 
 
                 />
+
             <EditText
                 android:id="@+id/editTextBrightness"
                 android:layout_width="wrap_content"
@@ -77,8 +81,8 @@
                 android:layout_marginTop="27dp"
                 android:inputType="textPersonName"
                 android:text="Φωτεινότητα  10"
-                android:textSize="40dp"
                 android:textColor="@color/black"
+                android:textSize="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,65 +91,65 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cat_background"
+                android:max="100"
+                android:progress="10"
+
                 app:layout_constraintBottom_toBottomOf="@+id/sett_screen"
                 app:layout_constraintEnd_toEndOf="@+id/sett_screen"
-
                 app:layout_constraintHorizontal_bias="0.32"
                 app:layout_constraintStart_toStartOf="@+id/sett_screen"
                 app:layout_constraintTop_toTopOf="@+id/sett_screen"
-                app:layout_constraintVertical_bias="0.854"
-                android:max="100"
-                android:progress="10"
-                />
+                app:layout_constraintVertical_bias="0.854" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1">
-        <TextView
-            android:id="@+id/sett_timer"
-            android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/settings"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="60dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
 
-            />
-    <EditText
-        android:id="@+id/editTextContrast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:inputType="textPersonName"
-        android:text="Αντίθεση 10"
-        android:textSize="40dp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-    <SeekBar
-        android:id="@+id/seekBar3"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/cat_background"
-        app:layout_constraintBottom_toBottomOf="@+id/sett_timer"
-        app:layout_constraintEnd_toEndOf="@+id/sett_timer"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="@+id/sett_timer"
-        app:layout_constraintTop_toTopOf="@+id/sett_timer"
-        app:layout_constraintVertical_bias="0.854"
-        android:max="100"
-        android:progress="10"
-        />
+            <TextView
+                android:id="@+id/sett_timer"
+                android:layout_width="350dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/settings"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <EditText
+                android:id="@+id/editTextContrast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:inputType="textPersonName"
+                android:text="Αντίθεση 10"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/seekBar3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cat_background"
+                android:max="100"
+                android:progress="10"
+                app:layout_constraintBottom_toBottomOf="@+id/sett_timer"
+                app:layout_constraintEnd_toEndOf="@+id/sett_timer"
+                app:layout_constraintHorizontal_bias="0.32"
+                app:layout_constraintStart_toStartOf="@+id/sett_timer"
+                app:layout_constraintTop_toTopOf="@+id/sett_timer"
+                app:layout_constraintVertical_bias="0.854" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -171,8 +175,8 @@
                 android:layout_marginTop="27dp"
                 android:inputType="textPersonName"
                 android:text="Χρώμα 10"
-                android:textSize="40dp"
                 android:textColor="@color/black"
+                android:textSize="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,31 +185,31 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cat_background"
+                android:max="100"
+                android:progress="10"
                 app:layout_constraintBottom_toBottomOf="@+id/sett_internet"
                 app:layout_constraintEnd_toEndOf="@+id/sett_internet"
                 app:layout_constraintStart_toStartOf="@+id/sett_internet"
                 app:layout_constraintTop_toTopOf="@+id/sett_internet"
-                app:layout_constraintVertical_bias="0.854"
-                android:max="100"
-                android:progress="10"
-                />
+                app:layout_constraintVertical_bias="0.854" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-        <TextView
-            android:id="@+id/sett_info"
-            android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:layout_weight="1"
-            android:background="@drawable/settings"
-            android:textSize="60dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sett_info"
+                android:layout_width="350dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/settings"
+                android:textSize="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/editTextSaturation"
@@ -214,24 +218,24 @@
                 android:layout_marginTop="27dp"
                 android:inputType="textPersonName"
                 android:text="Κορεσμός 10"
-                android:textSize="40dp"
                 android:textColor="@color/black"
+                android:textSize="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <SeekBar
                 android:id="@+id/seekBar5"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cat_background"
+                android:max="100"
+                android:progress="10"
                 app:layout_constraintBottom_toBottomOf="@+id/sett_info"
                 app:layout_constraintEnd_toEndOf="@+id/sett_info"
                 app:layout_constraintHorizontal_bias="0.32"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/sett_info"
-                app:layout_constraintVertical_bias="0.896"
-                android:max="100"
-                android:progress="10"
-                />
+                app:layout_constraintVertical_bias="0.896" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
