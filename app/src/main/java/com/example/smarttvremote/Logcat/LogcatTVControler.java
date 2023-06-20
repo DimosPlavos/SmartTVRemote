@@ -50,6 +50,11 @@ public class LogcatTVControler extends Service implements ITVControler
     }
 
     @Override
+    public boolean isOnMute() {
+        return TVinMute;
+    }
+
+    @Override
     public void mute() {
         if(!this.TVisOn)
         {
