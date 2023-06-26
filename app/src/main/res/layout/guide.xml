@@ -8,6 +8,18 @@
     android:background="#040D36"
     tools:context=".Smart_Main.Guide">
 
+    <ImageButton
+        android:id="@+id/back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription=" "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_colour" />
+
     <ImageView
         android:id="@+id/daybefore"
         android:layout_width="60dp"
@@ -20,17 +32,6 @@
         app:layout_constraintStart_toStartOf="@+id/arrowleft"
         app:layout_constraintTop_toBottomOf="@+id/arrowdown"
         app:srcCompat="@drawable/doubleright" />
-
-    <ImageView
-        android:id="@+id/returnbutton_guide"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/rounded_background"
-        app:layout_constraintEnd_toStartOf="@+id/daybefore"
-        app:layout_constraintTop_toTopOf="@+id/daybefore"
-        app:srcCompat="@drawable/resource_return" />
 
     <ImageView
         android:id="@+id/arrowleft"
@@ -90,16 +91,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/okbutton" />
 
-    <ImageView
-        android:id="@+id/info_guide"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:background="@drawable/rounded_background"
-        app:layout_constraintStart_toEndOf="@+id/dayafter"
-        app:layout_constraintTop_toTopOf="@+id/dayafter"
-        app:srcCompat="@drawable/infobutton" />
-
     <TextView
         android:id="@+id/guidetext"
         android:layout_width="195dp"
@@ -123,6 +114,7 @@
         android:background="@drawable/rounded_background"
 
         app:layout_constraintEnd_toEndOf="@+id/arrowright"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="@+id/arrowdown"
         app:layout_constraintTop_toTopOf="@+id/daybefore"
         app:srcCompat="@drawable/doubleright" />

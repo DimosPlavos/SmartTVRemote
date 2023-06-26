@@ -21,10 +21,10 @@ public class Guide extends AppCompatActivity {
         Utills.SetUpViewOnClickListener(this, R.id.arrowup, ()->{ Toast.makeText(getApplicationContext(),"Arrow up", Toast.LENGTH_LONG).show();  });
         Utills.SetUpViewOnClickListener(this, R.id.arrowleft, ()->{ Toast.makeText(getApplicationContext(),"Arrow left", Toast.LENGTH_LONG).show();  });
         Utills.SetUpViewOnClickListener(this, R.id.arrowright, ()->{ Toast.makeText(getApplicationContext(),"Arrow right", Toast.LENGTH_LONG).show();  });
-        Utills.SetUpViewOnClickListener(this, R.id.returnbutton_guide, ()->{ Toast.makeText(getApplicationContext(),"Return Button", Toast.LENGTH_LONG).show();  });
+        Utills.SetUpViewOnClickListener(this, R.id.back2, ()->{ super.finish(); });
+        Utills.SetUpViewOnClickListener(this, R.id.okbutton, ()->{ Toast.makeText(getApplicationContext(),"OK", Toast.LENGTH_LONG).show(); });
         Utills.SetUpViewOnClickListener(this, R.id.dayafter, ()->{ Toast.makeText(getApplicationContext(),"1 Day After", Toast.LENGTH_LONG).show();  });
         Utills.SetUpViewOnClickListener(this, R.id.daybefore, ()->{ Toast.makeText(getApplicationContext(),"1 Day Before", Toast.LENGTH_LONG).show();  });
-        Utills.SetUpViewOnClickListener(this, R.id.info_guide, ()->{ Toast.makeText(getApplicationContext(),"Info guide", Toast.LENGTH_LONG).show();  });
 
     }
 }

@@ -4,6 +4,8 @@ package com.example.smarttvremote.Smart_Main;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import com.example.smarttvremote.Basic_Main.BasicActivity;
@@ -42,7 +44,17 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
             startActivity(intent);
         });
 
-        Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{ tv.mute(); });
+        Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{
+            tv.mute();
+
+            ImageView button = (ImageView)findViewById(R.id.s_mutebutton);
+
+            if(tv.isOnMute()) {
+                button.setImageResource(R.drawable.unmute);
+            }else{
+                button.setImageResource(R.drawable.mute);
+            }
+        });
 
         Utills.SetUpViewOnClickListener(this, R.id.settings, ()->{
             Intent intent = new Intent(this, SettingsActivity.class);
