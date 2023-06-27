@@ -22,24 +22,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="48dp"
             android:background="@null"
             android:contentDescription=" "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back_colour" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="276dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="60dp"
+            android:layout_width="243dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="72dp"
             android:layout_marginEnd="4dp"
             android:inputType="textPersonName"
             android:text="Χρονοδιακόπτης"
             android:textColor="#1BFFB6"
-            android:textSize="35dp"
+            android:textSize="32dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toEndOf="@+id/back"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -65,7 +67,6 @@
         android:id="@+id/sett_timer"
         android:layout_width="361dp"
         android:layout_height="400dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="252dp"
         android:layout_weight="1"
         android:background="@drawable/settings"
@@ -76,9 +77,10 @@
 
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.072" />
 
     <ImageView
         android:id="@+id/add_time"

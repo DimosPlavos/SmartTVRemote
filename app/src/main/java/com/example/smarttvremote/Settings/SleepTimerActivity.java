@@ -21,7 +21,7 @@ public class SleepTimerActivity extends AppCompatActivity
         setContentView(R.layout.sleep_timer);
 
         text_view = (TextView)findViewById(R.id.time_text);
-        text_view.setText(Integer.toString(time) + " Λεπτα");
+        text_view.setText(Integer.toString(time) + " Λεπτά");
 
         Utills.SetUpViewOnClickListener(this, R.id.back, ()->{ super.finish(); });
 
@@ -29,14 +29,14 @@ public class SleepTimerActivity extends AppCompatActivity
             if(time < 999){
                 time++;
             }
-            text_view.setText(Integer.toString(time) + " Λεπτα");
+            text_view.setText(Integer.toString(time) + " Λεπτά");
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.sub_time, ()->{
             if(time > 0){
                 time--;
             }
-            text_view.setText(Integer.toString(time) + " Λεπτα");
+            text_view.setText(Integer.toString(time) + " Λεπτά");
         });
     }
 }
