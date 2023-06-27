@@ -78,8 +78,8 @@ public abstract class AbstractControllerActivity extends AppCompatActivity
                                  Intent data) {
         int REQUEST_SPEECH_RECOGNIZER = 3000;
         super.onActivityResult(requestCode, resultCode, data);
-        Log.i("DEMO-REQUESTCODE", Integer.toString(requestCode));
-        Log.i("DEMO-RESULTCODE", Integer.toString(resultCode));
+        //Log.i("DEMO-REQUESTCODE", Integer.toString(requestCode));
+        //Log.i("DEMO-RESULTCODE", Integer.toString(resultCode));
 
         if (requestCode == REQUEST_SPEECH_RECOGNIZER && resultCode == Activity.RESULT_OK && data != null) {
             ArrayList<String> text = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
@@ -108,6 +108,18 @@ public abstract class AbstractControllerActivity extends AppCompatActivity
                 break;
             case "previous":
                 tv.previousChannel();
+                break;
+            case "volume up":
+                tv.soundUp();
+                break;
+            case "volume down":
+                tv.soundDown();
+                break;
+            case "mute":
+                if(!tv.isOnMute()) tv.mute();
+                break;
+            case "unmute":
+                if(tv.isOnMute()) tv.mute();
                 break;
             default:
                 Toast.makeText(getApplicationContext(),"Operation is not valid",Toast.LENGTH_LONG).show();

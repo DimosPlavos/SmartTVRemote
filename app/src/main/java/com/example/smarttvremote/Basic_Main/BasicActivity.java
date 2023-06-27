@@ -1,6 +1,10 @@
 package com.example.smarttvremote.Basic_Main;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+
 import com.example.smarttvremote.R;
 import com.example.smarttvremote.Settings.SettingsActivity;
 import com.example.smarttvremote.Smart_Main.SmartActivity;
@@ -14,7 +18,18 @@ public class BasicActivity extends AbstractControllerActivity
         setContentView(R.layout.basic);
 
         Utills.SetUpViewOnClickListener(this, R.id.b_powerbutton, ()->{ tv.powerUp(); });
-        Utills.SetUpViewOnClickListener(this, R.id.b_mutebutton, ()->{ tv.mute(); });
+        Utills.SetUpViewOnClickListener(this, R.id.b_mutebutton, ()->{
+            tv.mute();
+
+            ImageView button = (ImageButton)findViewById(R.id.b_mutebutton);
+
+            if(tv.isOnMute()) {
+                button.setImageResource(R.drawable.unmute1);
+            }else{
+                button.setImageResource(R.drawable.mute1);
+            }
+
+        });
 
         Utills.SetUpViewOnClickListener(this, R.id.b_button0, ()->{ handleNumbers(0); });
         Utills.SetUpViewOnClickListener(this, R.id.b_button1, ()->{ handleNumbers(1); });

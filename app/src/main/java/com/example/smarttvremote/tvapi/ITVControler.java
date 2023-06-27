@@ -12,6 +12,8 @@ public interface ITVControler
     boolean isOn();
 
     // sound
+    boolean isOnMute();
+
     void mute(); // for the mute button
     void soundUp(); // increase the sound
     void soundDown(); // decrease the sound
