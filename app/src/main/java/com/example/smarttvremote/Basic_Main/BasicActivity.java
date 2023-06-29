@@ -25,15 +25,7 @@ public class BasicActivity extends AbstractControllerActivity
         Utills.SetUpViewOnClickListener(this, R.id.b_powerbutton, ()->{ tv.powerUp(); });
         Utills.SetUpViewOnClickListener(this, R.id.b_mutebutton, ()->{
             tv.mute();
-
-            ImageView button = (ImageButton)findViewById(R.id.b_mutebutton);
-
-            if(tv.isOnMute()) {
-                button.setImageResource(R.drawable.unmute1);
-            }else{
-                button.setImageResource(R.drawable.mute1);
-            }
-
+            UpdateUI();
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.b_button0, ()->{ handleNumbers(0); });
@@ -52,51 +44,46 @@ public class BasicActivity extends AbstractControllerActivity
 
         Utills.SetUpViewOnClickListener(this, R.id.b_channelup, ()->{ tv.nextChannel(); });
         Utills.SetUpViewOnClickListener(this, R.id.b_channeldown, ()->{ tv.previousChannel(); });
-        Utills.SetUpViewOnClickListener(this, R.id.b_microphone, ()->{ OnVoiceRecognition(); });
 
-//        // Microphone
-//        ImageView microphoneButton = findViewById(R.id.b_microphone);
-//        microphoneButton.setOnTouchListener(new View.OnTouchListener() {
-//            private Handler longClickHandler = new Handler();
-//            private Runnable longClickRunnable = new Runnable() {
-//                @Override
-//                public void run() {
-//                    OnVoiceRecognition(); // If button is clicked for 1 second, activate voice recognition
-//                }
-//            };
-//
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                switch (event.getAction()) {
-//                    case MotionEvent.ACTION_DOWN:
-//                        longClickHandler.postDelayed(longClickRunnable, 1000); // Start the long click handler after 2 seconds
-//                        v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS); // Vibrate when button is pressed
-//                        v.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100); // Apply scaling effect
-//                        break;
-//                    case MotionEvent.ACTION_UP:
-//                    case MotionEvent.ACTION_CANCEL:
-//                        longClickHandler.removeCallbacks(longClickRunnable); // Cancel the long click handler
-//                        v.performHapticFeedback(HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING); // Cancel vibration when button is released or touch is canceled
-//                        v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(100); // Reset scaling effect
-//                        break;
-//                }
-//                return true;
-//            }
-//        });
-
-
-
-
+        Utills.SetUpOnTouchListener(this, R.id.b_microphone, (View v, MotionEvent event) ->
+        {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    longClickHandler.postDelayed(longClickRunnable, 1000); // Start the long click handler after 2 seconds
+                    v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS); // Vibrate when button is pressed
+                    v.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100); // Apply scaling effect
+                    break;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL:
+                    longClickHandler.removeCallbacks(longClickRunnable); // Cancel the long click handler
+                    v.performHapticFeedback(HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING); // Cancel vibration when button is released or touch is canceled
+                    v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(100); // Reset scaling effect
+                    break;
+            }
+        });
 
         Utills.SetUpViewOnClickListener(this, R.id.b_settings, ()->{
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
+            UpdateUI();
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.b_mode, () ->{
             Intent intent = new Intent(this, SmartActivity.class);
             startActivity(intent);
+            UpdateUI();
         });
+    }
+
+    @Override
+    public void UpdateUI() {
+        ImageView button = (ImageButton)findViewById(R.id.b_mutebutton);
+
+        if(tv.isOnMute()) {
+            button.setImageResource(R.drawable.unmute1);
+        }else{
+            button.setImageResource(R.drawable.mute1);
+        }
     }
 
     private void handleNumbers(int num)

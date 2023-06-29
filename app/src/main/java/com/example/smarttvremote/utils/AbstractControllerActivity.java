@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.speech.RecognizerIntent;
 import android.util.Log;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 public abstract class AbstractControllerActivity extends AppCompatActivity
 {
     public abstract void SetUp();
+    public abstract void UpdateUI();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +58,20 @@ public abstract class AbstractControllerActivity extends AppCompatActivity
 
             tv = binder.getService();
             bouded = true;
+            UpdateUI();
         }
 
         // Called when the connection with the service disconnects unexpectedly.
         public void onServiceDisconnected(ComponentName className) {
             bouded = false;
+        }
+    };
+
+    protected Handler longClickHandler = new Handler();
+    protected Runnable longClickRunnable = new Runnable() {
+        @Override
+        public void run() {
+            OnVoiceRecognition(); // If button is clicked for 1 second, activate voice recognition
         }
     };
 
@@ -125,6 +136,7 @@ public abstract class AbstractControllerActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(),"Operation is not valid",Toast.LENGTH_LONG).show();
                 break;
         }
+        UpdateUI();
     }
 
 }

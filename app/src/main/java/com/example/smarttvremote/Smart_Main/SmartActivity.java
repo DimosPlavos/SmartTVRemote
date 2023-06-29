@@ -4,6 +4,9 @@ package com.example.smarttvremote.Smart_Main;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
+import android.view.HapticFeedbackConstants;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -29,6 +32,7 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         Utills.SetUpViewOnClickListener(this, R.id.source, ()->{
             Intent intent = new Intent(this, SourceActivity.class);
             startActivity(intent);
+            UpdateUI();
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.channelup, ()->{ tv.nextChannel(); });
@@ -37,38 +41,56 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         Utills.SetUpViewOnClickListener(this, R.id.volumeup, ()->{ tv.soundUp(); });
         Utills.SetUpViewOnClickListener(this, R.id.volumedown, ()->{ tv.soundDown(); });
 
-        //Utills.SetUpViewOnClickListener(this, R.id.guide, ()->{ Toast.makeText(getApplicationContext(),"Guide button has been clicked",Toast.LENGTH_LONG).show(); });
-
         Utills.SetUpViewOnClickListener(this, R.id.guide, () ->{
             Intent intent = new Intent(this, Guide.class);
             startActivity(intent);
+            UpdateUI();
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{
             tv.mute();
-
-            ImageView button = (ImageView)findViewById(R.id.s_mutebutton);
-
-            if(tv.isOnMute()) {
-                button.setImageResource(R.drawable.unmute);
-            }else{
-                button.setImageResource(R.drawable.mute);
-            }
+            UpdateUI();
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.settings, ()->{
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
+            UpdateUI();
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.basic, () ->{
-            Intent intent = new Intent(this, BasicActivity.class);
-            startActivity(intent);
+            super.finish();
         });
 
-        Utills.SetUpViewOnClickListener(this, R.id.microphone, ()->{ OnVoiceRecognition(); });
+        Utills.SetUpOnTouchListener(this, R.id.microphone, (View v, MotionEvent event) ->
+        {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    longClickHandler.postDelayed(longClickRunnable, 1000); // Start the long click handler after 2 seconds
+                    v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS); // Vibrate when button is pressed
+                    v.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100); // Apply scaling effect
+                    break;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL:
+                    longClickHandler.removeCallbacks(longClickRunnable); // Cancel the long click handler
+                    v.performHapticFeedback(HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING); // Cancel vibration when button is released or touch is canceled
+                    v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(100); // Reset scaling effect
+                    break;
+            }
+        });
 
         recyclerviewCategory();
+    }
+
+    @Override
+    public void UpdateUI() {
+        ImageView button = (ImageView)findViewById(R.id.s_mutebutton);
+
+        if(tv.isOnMute()) {
+            button.setImageResource(R.drawable.unmute);
+        }else{
+            button.setImageResource(R.drawable.mute);
+        }
     }
 
     private void recyclerviewCategory(){
