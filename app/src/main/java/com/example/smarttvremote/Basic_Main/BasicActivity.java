@@ -1,7 +1,12 @@
 package com.example.smarttvremote.Basic_Main;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.view.HapticFeedbackConstants;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -47,8 +52,41 @@ public class BasicActivity extends AbstractControllerActivity
 
         Utills.SetUpViewOnClickListener(this, R.id.b_channelup, ()->{ tv.nextChannel(); });
         Utills.SetUpViewOnClickListener(this, R.id.b_channeldown, ()->{ tv.previousChannel(); });
-
         Utills.SetUpViewOnClickListener(this, R.id.b_microphone, ()->{ OnVoiceRecognition(); });
+
+//        // Microphone
+//        ImageView microphoneButton = findViewById(R.id.b_microphone);
+//        microphoneButton.setOnTouchListener(new View.OnTouchListener() {
+//            private Handler longClickHandler = new Handler();
+//            private Runnable longClickRunnable = new Runnable() {
+//                @Override
+//                public void run() {
+//                    OnVoiceRecognition(); // If button is clicked for 1 second, activate voice recognition
+//                }
+//            };
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                switch (event.getAction()) {
+//                    case MotionEvent.ACTION_DOWN:
+//                        longClickHandler.postDelayed(longClickRunnable, 1000); // Start the long click handler after 2 seconds
+//                        v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS); // Vibrate when button is pressed
+//                        v.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100); // Apply scaling effect
+//                        break;
+//                    case MotionEvent.ACTION_UP:
+//                    case MotionEvent.ACTION_CANCEL:
+//                        longClickHandler.removeCallbacks(longClickRunnable); // Cancel the long click handler
+//                        v.performHapticFeedback(HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING); // Cancel vibration when button is released or touch is canceled
+//                        v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(100); // Reset scaling effect
+//                        break;
+//                }
+//                return true;
+//            }
+//        });
+
+
+
+
 
         Utills.SetUpViewOnClickListener(this, R.id.b_settings, ()->{
             Intent intent = new Intent(this, SettingsActivity.class);

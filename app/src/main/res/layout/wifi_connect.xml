@@ -9,44 +9,53 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="401dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass">
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="62dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:background="@null"
             android:contentDescription=" "
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back_colour" />
 
         <TextView
-
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="36dp"
+            android:layout_width="250dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
             android:inputType="textPersonName"
-            android:text="Wifi"
-            android:textColor="#1BFFB6"
-            android:textSize="50dp"
+            android:text="Wi-fi"
+            android:textAlignment="center"
+            android:textColor="#6BEFC5"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="670dp"
+        android:layout_width="391dp"
+        android:layout_height="577dp"
         android:gravity="center"
         android:orientation="vertical"
+
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -54,8 +63,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            android:scaleType="fitCenter"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/sett_screen"
@@ -63,7 +72,8 @@
                 android:layout_height="100dp"
                 android:background="@drawable/settings"
                 android:padding="10dp"
-                android:text="Κωδικός"
+                android:text="  Κωδικός"
+                android:scaleType="fitCenter"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="30dp"
@@ -72,14 +82,14 @@
 
             <EditText
                 android:id="@+id/editTextTextPassword"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="35dp"
+                android:layout_width="308dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="38dp"
                 android:background="@drawable/white_background"
                 android:ems="15"
-                android:hint="Εισαγάγετε κωδικό"
-                android:padding="10dp"
+                android:hint="  Εισαγάγετε κωδικό.."
                 android:inputType="textPassword"
+                android:scaleType="fitCenter"
                 app:layout_constraintBottom_toBottomOf="@+id/sett_screen"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -88,15 +98,16 @@
 
         <Button
             android:id="@+id/sett_info"
-            android:layout_width="350dp"
-            android:layout_height="100dp"
+            android:layout_width="221dp"
+            android:layout_height="50dp"
             android:layout_marginTop="62dp"
             android:layout_marginBottom="32dp"
-            android:background="@drawable/settings"
+            android:background="@drawable/connect_background"
+            android:scaleType="fitCenter"
             android:text="Σύνδεση"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="50dp"
+            android:textSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
