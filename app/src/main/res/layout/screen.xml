@@ -10,44 +10,50 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="402dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="401dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayoutBox"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass">
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="62dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:background="@null"
             android:contentDescription=" "
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back_colour" />
 
         <TextView
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="32dp"
+            android:layout_width="250dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
             android:inputType="textPersonName"
             android:text="Οθόνη"
-            android:textColor="#1BFFB6"
-            android:textSize="50dp"
+            android:textAlignment="center"
+            android:textColor="#6BEFC5"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutBox"
-        android:layout_width="395dp"
-        android:layout_height="551dp"
+        android:layout_width="423dp"
+        android:layout_height="513dp"
         android:layout_marginTop="1dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -58,14 +64,14 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="126dp"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/sett_screen"
-                android:layout_width="350dp"
-                android:layout_height="0dp"
+                android:layout_width="342dp"
+                android:layout_height="74dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/settings"
                 android:textAllCaps="false"
@@ -81,93 +87,89 @@
                 android:id="@+id/editTextBrightness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="27dp"
+                android:layout_marginStart="16dp"
                 android:inputType="textPersonName"
                 android:text="Φωτεινότητα  10"
                 android:textColor="@color/black"
-                android:textSize="40dp"
+                android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/sett_screen" />
 
             <SeekBar
                 android:id="@+id/seekBar2"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_width="302dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/cat_background"
                 android:max="100"
-                android:progress="10"
 
-                app:layout_constraintBottom_toBottomOf="@+id/sett_screen"
+                android:progress="10"
                 app:layout_constraintEnd_toEndOf="@+id/sett_screen"
                 app:layout_constraintHorizontal_bias="0.32"
                 app:layout_constraintStart_toStartOf="@+id/sett_screen"
-                app:layout_constraintTop_toTopOf="@+id/sett_screen"
-                app:layout_constraintVertical_bias="0.854" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextBrightness" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="126dp"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/sett_timer"
-                android:layout_width="350dp"
-                android:layout_height="0dp"
+                android:layout_width="342dp"
+                android:layout_height="74dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/settings"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="60dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/editTextContrast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="27dp"
+                android:layout_marginStart="16dp"
                 android:inputType="textPersonName"
                 android:text="Αντίθεση 10"
                 android:textColor="@color/black"
-                android:textSize="40dp"
+                android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/sett_timer" />
 
             <SeekBar
                 android:id="@+id/seekBar3"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_width="302dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/cat_background"
+
                 android:max="100"
                 android:progress="10"
-                app:layout_constraintBottom_toBottomOf="@+id/sett_timer"
                 app:layout_constraintEnd_toEndOf="@+id/sett_timer"
-                app:layout_constraintHorizontal_bias="0.32"
+                app:layout_constraintHorizontal_bias="0.4"
                 app:layout_constraintStart_toStartOf="@+id/sett_timer"
-                app:layout_constraintTop_toTopOf="@+id/sett_timer"
-                app:layout_constraintVertical_bias="0.854" />
-
+                app:layout_constraintTop_toBottomOf="@+id/editTextContrast" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="126dp"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/sett_internet"
-                android:layout_width="350dp"
-                android:layout_height="0dp"
+                android:layout_width="342dp"
+                android:layout_height="74dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/settings"
                 android:textAllCaps="false"
+                android:textColor="@color/black"
                 android:textSize="60dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -175,41 +177,41 @@
                 android:id="@+id/editTextColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="27dp"
+                android:layout_marginStart="16dp"
                 android:inputType="textPersonName"
                 android:text="Χρώμα 10"
                 android:textColor="@color/black"
-                android:textSize="40dp"
+                android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/sett_internet" />
 
             <SeekBar
                 android:id="@+id/seekBar4"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_width="302dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/cat_background"
                 android:max="100"
                 android:progress="10"
-                app:layout_constraintBottom_toBottomOf="@+id/sett_internet"
                 app:layout_constraintEnd_toEndOf="@+id/sett_internet"
                 app:layout_constraintStart_toStartOf="@+id/sett_internet"
-                app:layout_constraintTop_toTopOf="@+id/sett_internet"
-                app:layout_constraintVertical_bias="0.854" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextColor" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="126dp"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/sett_info"
-                android:layout_width="350dp"
-                android:layout_height="0dp"
+                android:layout_width="342dp"
+                android:layout_height="74dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
-                android:layout_weight="1"
                 android:background="@drawable/settings"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
                 android:textSize="60dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -218,27 +220,25 @@
                 android:id="@+id/editTextSaturation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="27dp"
+                android:layout_marginStart="16dp"
                 android:inputType="textPersonName"
                 android:text="Κορεσμός 10"
                 android:textColor="@color/black"
-                android:textSize="40dp"
+                android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/sett_info" />
 
             <SeekBar
                 android:id="@+id/seekBar5"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_width="302dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/cat_background"
                 android:max="100"
                 android:progress="10"
-                app:layout_constraintBottom_toBottomOf="@+id/sett_info"
                 app:layout_constraintEnd_toEndOf="@+id/sett_info"
-                app:layout_constraintHorizontal_bias="0.32"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/sett_info"
-                app:layout_constraintVertical_bias="0.896" />
+                app:layout_constraintStart_toStartOf="@+id/sett_info"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSaturation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

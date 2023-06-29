@@ -8,82 +8,90 @@
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/linearLayoutSett"
+        android:layout_width="401dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass">
 
         <ImageButton
             android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="62dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:background="@null"
             android:contentDescription=" "
+            android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back_colour" />
 
         <TextView
-
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="250dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
             android:inputType="textPersonName"
             android:text="Πληροφορίες"
-            android:textColor="#1BFFB6"
-            android:textSize="40dp"
+            android:textAlignment="center"
+            android:textColor="#6BEFC5"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="387dp"
-        android:layout_height="670dp"
-        android:layout_marginBottom="236dp"
+    <LinearLayout
+        android:id="@+id/linearLayoutSettings"
+        android:layout_width="323dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="1dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSett"
+        app:layout_constraintVertical_bias="0.068">
 
         <TextView
             android:id="@+id/sett_info"
-            android:layout_width="350dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
             android:background="@drawable/settings"
             android:gravity="center"
             android:text="Έκδοση: 1.1.2"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textSize="27dp"
+            app:layout_constraintHorizontal_bias="0.496"
+            tools:layout_editor_absoluteX="56dp" />
 
         <TextView
             android:id="@+id/sett_screen"
-            android:layout_width="350dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/settings"
             android:gravity="center"
             android:padding="10dp"
             android:text="Μοντέλο: AB-48916"
             android:textAllCaps="false"
-
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="27dp"
+            app:layout_constraintHorizontal_bias="0.496"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="347dp" />
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="201dp" />
+    </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
