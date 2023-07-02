@@ -68,6 +68,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
             @Override
             public void onClick(View view) {
                 listener.onItemClicked(categoryDomains.get(position));
+
             }
         });
 

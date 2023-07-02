@@ -42,7 +42,7 @@
             android:inputType="textPersonName"
             android:text="Δίκτυο"
             android:textAlignment="center"
-            android:textColor="#6BEFC5"
+            android:textColor="#E3E3E3"
             android:textSize="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,11 +66,12 @@
             android:id="@+id/tv_possible_connections"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Possible WiFi Connections"
-            android:textColor="@color/white"
-            android:textSize="24sp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:text="Possible WiFi Connections"
+            android:textColor="#E3E3E3"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/sett_Wifi1"

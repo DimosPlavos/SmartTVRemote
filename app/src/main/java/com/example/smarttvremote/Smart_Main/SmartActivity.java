@@ -20,8 +20,8 @@ import com.example.smarttvremote.utils.Utills;
 
 public class SmartActivity extends AbstractControllerActivity implements SelectListener
 {
-    private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerViewCategoryList;
+    private RecyclerView.Adapter adapter, adapter1;
+    private RecyclerView recyclerViewCategoryList, recyclerViewCategoryListApps ;
 
     @Override
     public void SetUp() {
@@ -45,6 +45,11 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
             Intent intent = new Intent(this, Guide.class);
             startActivity(intent);
             UpdateUI();
+        });
+
+        Utills.SetUpViewOnClickListener(this, R.id.apps, () ->{
+            Intent intent = new Intent(this, MoreApps.class);
+            startActivity(intent);
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{
@@ -80,6 +85,7 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         });
 
         recyclerviewCategory();
+        recyclerviewCategoryApps();
     }
 
     @Override
@@ -114,7 +120,28 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
     }
 
     @Override
+    public void onItemClickedApps(AppsDomain myModel1) {
+        Toast.makeText(this,myModel1.getTitle(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
+
+    private void recyclerviewCategoryApps(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewCategoryListApps = findViewById(R.id.recyclerViewApps);
+        recyclerViewCategoryListApps.setLayoutManager(linearLayoutManager);
+
+        ArrayList<AppsDomain> apps = new ArrayList<>();
+        apps.add(new AppsDomain("YouTube", "youtube"));
+        apps.add(new AppsDomain("Spotify", "spotify"));
+        apps.add(new AppsDomain("Netflix", "netflix"));
+        apps.add(new AppsDomain("Google", "googleapp"));
+
+        adapter1 = new AppsAdaptor(apps,this);
+        recyclerViewCategoryListApps.setAdapter(adapter1);
+    }
+
 }
