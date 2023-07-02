@@ -64,7 +64,8 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.basic, () ->{
-            super.finish();
+            Intent intent = new Intent(this, BasicActivity.class);
+            startActivity(intent);
         });
 
         Utills.SetUpOnTouchListener(this, R.id.microphone, (View v, MotionEvent event) ->
