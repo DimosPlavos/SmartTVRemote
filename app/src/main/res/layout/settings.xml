@@ -40,7 +40,7 @@
             android:inputType="textPersonName"
             android:text="Ρυθμίσεις"
             android:textAlignment="center"
-            android:textColor="#6BEFC5"
+            android:textColor="#E3E3E3"
             android:textSize="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
     <LinearLayout
         android:id="@+id/linearLayoutSettings"
         android:layout_width="318dp"
-        android:layout_height="421dp"
+        android:layout_height="520dp"
         android:layout_marginTop="1dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -91,6 +91,16 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/settings"
             android:text="Δίκτυο"
+            android:textAllCaps="false"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/sett_microphone"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/settings"
+            android:text="Μικρόφωνο"
             android:textAllCaps="false"
             android:textSize="25sp" />
 

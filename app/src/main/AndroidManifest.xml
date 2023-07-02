@@ -36,6 +36,8 @@
         <activity android:name=".Smart_Main.Guide" android:exported="true"/>
         <activity android:name=".Settings.WifiActivity" android:exported="true"/>
         <activity android:name=".Settings.SleepTimerActivity" android:exported="true"/>
+        <activity android:name=".Settings.MicrophoneInfoActivity" android:exported="true"/>
+        <activity android:name=".Smart_Main.MoreApps" android:exported="true"/>
     </application>
 
 </manifest>
