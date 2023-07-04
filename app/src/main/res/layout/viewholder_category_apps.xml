@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayoutApp"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
+    android:layout_width="97dp"
+    android:layout_height="97dp"
     android:layout_margin="8dp"
     android:background="@drawable/cat_background">
 

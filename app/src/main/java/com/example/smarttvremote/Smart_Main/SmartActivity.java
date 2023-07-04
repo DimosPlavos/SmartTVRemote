@@ -54,7 +54,14 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
 
         Utills.SetUpViewOnClickListener(this, R.id.s_mutebutton, ()->{
             tv.mute();
-            UpdateUI();
+
+            ImageView button = (ImageView)findViewById(R.id.s_mutebutton);
+
+            if(tv.isOnMute()) {
+                button.setImageResource(R.drawable.unmute);
+            }else{
+                button.setImageResource(R.drawable.mute);
+            }
         });
 
         Utills.SetUpViewOnClickListener(this, R.id.settings, ()->{
@@ -100,16 +107,17 @@ public class SmartActivity extends AbstractControllerActivity implements SelectL
         }
     }
 
+
     private void recyclerviewCategory(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
         recyclerViewCategoryList = findViewById(R.id.recyclerview);
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
         ArrayList<CategoryDomain> category = new ArrayList<>();
-        category.add(new CategoryDomain("Mega: Eytyximenoi Mazi", "mega_playingnow"));
-        category.add(new CategoryDomain("Netflix", "netflix"));
-        category.add(new CategoryDomain("Mute", "mute"));
-        category.add(new CategoryDomain("Plus", "plus"));
+        category.add(new CategoryDomain("MEGA: Eutuximenoi Mazi", "mega_playingnow"));
+        category.add(new CategoryDomain("ANT1: Egklimata", "egklimata"));
+        category.add(new CategoryDomain("STAR: Sto Para 5", "sto_para_5"));
+        category.add(new CategoryDomain("ALPHA: Konstantinou Kai Elenis", "kwnstantinou_kai_elenis"));
 
         adapter = new CategoryAdaptor(category, this);
         recyclerViewCategoryList.setAdapter(adapter);

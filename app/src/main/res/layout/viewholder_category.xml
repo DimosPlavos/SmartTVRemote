@@ -75,7 +75,7 @@
         android:id="@+id/textBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#80CCCCCC"
+        android:background="#90CCCCCC"
         app:layout_constraintStart_toStartOf="@id/categoryPic"
         app:layout_constraintTop_toTopOf="@id/categoryPic">
 
@@ -85,7 +85,8 @@
             android:layout_height="wrap_content"
             android:text="Sample Text"
             android:textColor="#070707"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

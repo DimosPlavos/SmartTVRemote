@@ -45,15 +45,15 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.cat_background));
                 break;
             }case 1: {
-                picUrl = "netflix";
+                picUrl = "egklimata";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.cat_background));
                 break;
             }case 2: {
-                picUrl = "mute";
+                picUrl = "sto_para_5";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.cat_background));
                 break;
             }case 3: {
-                picUrl = "plus";
+                picUrl = "kwnstantinou_kai_elenis";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.cat_background));
                 break;
             }
@@ -92,70 +92,53 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         }
     }
 
-    public class SeekBarActivity extends AppCompatActivity {
-
-        private AppBarConfiguration appBarConfiguration;
-        //private ActivitySeekBarBinding binding;
-        SeekBar seekBarBright;
-        TextView textViewBright;
-
-        SeekBar seekBarContrast;
-        TextView textViewContrast;
-
-        SeekBar seekBarColor;
-        TextView textViewColor;
-
-        SeekBar seekBarSaturation;
-        TextView textViewSaturation;
-
-
-
-        @SuppressLint("MissingInflatedId")
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            Log.i("TV", "HAHAHAHAH");
-
-            setContentView(R.layout.screen);
-            seekBarBright = (SeekBar) findViewById(R.id.seekBar2);
-            textViewBright = (TextView) findViewById(R.id.editTextBrightness);
-
-            seekBarContrast = (SeekBar) findViewById(R.id.seekBar3);
-            textViewContrast = (TextView) findViewById(R.id.editTextContrast);
-
-            seekBarColor = (SeekBar) findViewById(R.id.seekBar4);
-            textViewColor = (TextView) findViewById(R.id.editTextColor);
-
-            seekBarSaturation = (SeekBar) findViewById(R.id.seekBar5);
-            textViewSaturation = (TextView) findViewById(R.id.editTextSaturation);
-
-
-
-
-            seekBarBright.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-               // int seekBarValue = 10;
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                   // seekBarValue = progress;
-                    textViewBright.setText("Android: "+progress);
-                }
-
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-
-                }
-
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-
-                }
-            });
-//            seekBarContrast.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//                @Override
-//                public void onProgressChanged(SeekBar seekBar, int contrast, boolean b) {
-//                    textViewContrast.setText("Αντίθεση "+String.valueOf(contrast));
+//    public class SeekBarActivity extends AppCompatActivity {
 //
+//        private AppBarConfiguration appBarConfiguration;
+//        //private ActivitySeekBarBinding binding;
+//        SeekBar seekBarBright;
+//        TextView textViewBright;
+//
+//        SeekBar seekBarContrast;
+//        TextView textViewContrast;
+//
+//        SeekBar seekBarColor;
+//        TextView textViewColor;
+//
+//        SeekBar seekBarSaturation;
+//        TextView textViewSaturation;
+//
+//
+//
+//        @SuppressLint("MissingInflatedId")
+//        @Override
+//        protected void onCreate(Bundle savedInstanceState) {
+//            super.onCreate(savedInstanceState);
+//            Log.i("TV", "HAHAHAHAH");
+//
+//            setContentView(R.layout.screen);
+//            seekBarBright = (SeekBar) findViewById(R.id.seekBar2);
+//            textViewBright = (TextView) findViewById(R.id.editTextBrightness);
+//
+//            seekBarContrast = (SeekBar) findViewById(R.id.seekBar3);
+//            textViewContrast = (TextView) findViewById(R.id.editTextContrast);
+//
+//            seekBarColor = (SeekBar) findViewById(R.id.seekBar4);
+//            textViewColor = (TextView) findViewById(R.id.editTextColor);
+//
+//            seekBarSaturation = (SeekBar) findViewById(R.id.seekBar5);
+//            textViewSaturation = (TextView) findViewById(R.id.editTextSaturation);
+//
+//
+//
+//
+//            seekBarBright.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//
+//               // int seekBarValue = 10;
+//                @Override
+//                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                   // seekBarValue = progress;
+//                    textViewBright.setText("Android: "+progress);
 //                }
 //
 //                @Override
@@ -168,44 +151,61 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
 //
 //                }
 //            });
-//            seekBarColor.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//                @Override
-//                public void onProgressChanged(SeekBar seekBar, int color, boolean b) {
-//                    textViewColor.setText("Χρώμα "+String.valueOf(color));
+////            seekBarContrast.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+////                @Override
+////                public void onProgressChanged(SeekBar seekBar, int contrast, boolean b) {
+////                    textViewContrast.setText("Αντίθεση "+String.valueOf(contrast));
+////
+////                }
+////
+////                @Override
+////                public void onStartTrackingTouch(SeekBar seekBar) {
+////
+////                }
+////
+////                @Override
+////                public void onStopTrackingTouch(SeekBar seekBar) {
+////
+////                }
+////            });
+////            seekBarColor.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+////                @Override
+////                public void onProgressChanged(SeekBar seekBar, int color, boolean b) {
+////                    textViewColor.setText("Χρώμα "+String.valueOf(color));
+////
+////                }
+////
+////                @Override
+////                public void onStartTrackingTouch(SeekBar seekBar) {
+////
+////                }
+////
+////                @Override
+////                public void onStopTrackingTouch(SeekBar seekBar) {
+////
+////                }
+////            });
+////            seekBarSaturation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+////                @Override
+////                public void onProgressChanged(SeekBar seekBar, int saturation, boolean b) {
+////                    textViewSaturation.setText("Κορεσμός "+String.valueOf(saturation));
+////
+////                }
+////
+////                @Override
+////                public void onStartTrackingTouch(SeekBar seekBar) {
+////
+////                }
+////
+////                @Override
+////                public void onStopTrackingTouch(SeekBar seekBar) {
+////
+////                }
+////            });
 //
-//                }
 //
-//                @Override
-//                public void onStartTrackingTouch(SeekBar seekBar) {
 //
-//                }
+//        }
 //
-//                @Override
-//                public void onStopTrackingTouch(SeekBar seekBar) {
-//
-//                }
-//            });
-//            seekBarSaturation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//                @Override
-//                public void onProgressChanged(SeekBar seekBar, int saturation, boolean b) {
-//                    textViewSaturation.setText("Κορεσμός "+String.valueOf(saturation));
-//
-//                }
-//
-//                @Override
-//                public void onStartTrackingTouch(SeekBar seekBar) {
-//
-//                }
-//
-//                @Override
-//                public void onStopTrackingTouch(SeekBar seekBar) {
-//
-//                }
-//            });
-
-
-
-        }
-
-    }
+//    }
 }
